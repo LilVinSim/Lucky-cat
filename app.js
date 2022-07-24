@@ -1,7 +1,7 @@
 
 let luckyCat;
 function preload(){
-    luckyCat = loadModel('https://folio-2022.s3.ap-southeast-2.amazonaws.com/Maneki_Neko.OBJ')
+    luckyCat = loadModel('Maneki_Neko.OBJ')
 }
 function setup() {
 	var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
