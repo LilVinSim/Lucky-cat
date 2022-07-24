@@ -1,7 +1,7 @@
 
 let luckyCat;
 function preload(){
-    var url = 'Maneki_Neko.OBJ'
+    var url = 'dist/Maneki_Neko.OBJ'
     luckyCat = loadModel(url)
 }
 function setup() {
