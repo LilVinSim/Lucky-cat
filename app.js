@@ -1,24 +1,32 @@
-
 let luckyCat;
 function preload(){
     var url = 'Maneki_Neko.OBJ'
-    luckyCat = loadModel(url)
+    luckyCat = loadModel(url);
+    mySvg = loadImage("Logo3D_Pink.svg");
 }
 function setup() {
-	var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
+    var vw = windowWidth;
+    var vh = windowHeight;
+	var myCanvas = createCanvas(vw, vh, WEBGL);
     const newLocal = 'p5Container';
     myCanvas.parent(newLocal);
 }
 
 function windowResized(){
-	resizeCanvas(windowWidth, windowHeight);
+	resizeCanvas(vw, vh);
 }
 
 function draw() {
     background(0);
+
+    push();
     normalMaterial();
-    camera(0, 0, -180 );
+    camera(0, 20, -120, 0, -36,0,0,50,0);
     rotateX(280);
-    rotateY(frameCount * 0.01);
+    rotateY(frameCount * 0.02);
     model(luckyCat);
+    pop();
+
+    imageMode(CENTER);
+    image(mySvg,0,100);
 }
