@@ -20,7 +20,8 @@ function draw() {
 
     push();
     normalMaterial();
-    camera(0, 10, -110, 0, -50,0,0,50,0);
+    scale(0.5);
+    camera(0, 10, -120, 0, -50,0,0,50,0);
     rotateX(280);
     rotateY(frameCount * 0.02);
     model(luckyCat);
