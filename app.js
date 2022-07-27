@@ -2,7 +2,6 @@ let luckyCat;
 function preload(){
     var url = 'Maneki_Neko.OBJ'
     luckyCat = loadModel(url);
-    mySvg = loadImage("Logo3D_Pink.svg");
 }
 function setup() {
     var vw = windowWidth;
@@ -21,12 +20,9 @@ function draw() {
 
     push();
     normalMaterial();
-    camera(0, 20, -120, 0, -36,0,0,50,0);
+    camera(0, 10, -110, 0, -50,0,0,50,0);
     rotateX(280);
     rotateY(frameCount * 0.02);
     model(luckyCat);
     pop();
-
-    imageMode(CENTER);
-    image(mySvg,0,100);
 }
